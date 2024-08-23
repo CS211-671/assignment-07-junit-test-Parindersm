@@ -8,7 +8,7 @@ public class User {
 
     public User(String username) {
         this.username = username;
-        password = null;
+        this.password = null;
     }
 
     public User(String username, String password) {
@@ -37,5 +37,9 @@ public class User {
 
     public String getPassword() {
         return password;
+    }
+
+    public boolean checkPassword(String oldPassword) {
+        return validatePassword(oldPassword);
     }
 }
